@@ -1,0 +1,157 @@
+:root{
+    --colorPrimario: rebeccapurple;
+    --colorFondo: rgb(230, 206, 235);
+}
+body{
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    text-align: center;
+    color: var(--colorPrimario);
+    background: var(--colorFondo);
+}
+h2{
+    text-align: center;
+}
+
+td, th{
+    padding: 5px;
+}
+
+th{
+    background: var(--colorFondo);
+}
+
+p{
+    text-align: justify;
+}
+
+hr{
+  width: 80%;
+  height: 5px;
+  background-color: var(--colorPrimario);
+  color: var(--colorPrimario);
+}
+
+section {
+  width: 100%;
+}
+
+.titulo2{
+    text-align: center;
+    color: var(--colorPrimario);
+}
+.textoPrimario{
+    font-weight: 600;
+}
+.textoSecundario{
+    font-weight: 400;
+}
+
+.miPrimeraTabla, .miPrimeraTabla th, .miPrimeraTabla td{
+    border: 1px solid var(--colorPrimario);
+    border-collapse: collapse;
+}
+.miPrimeraTabla{
+    width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        width:100%;
+    }
+    thead {
+        display: none;
+    }
+    tr:nth-of-type(2n) {
+        background-color: inherit;
+    }
+    tr td:first-child {
+        background: var(--colorFondo);
+        font-weight:bold;
+        font-size:1.3em;
+    }
+    tbody td {
+        display: block;
+        text-align:center;
+    }
+    tbody td:before {
+        content: attr(data-th);
+        display: block;
+        text-align:center;
+    }
+    
+}
+
+.seccionHobbies {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.contenedorHobbies {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  width: 100%;
+}
+
+.galeriaHobbies {
+  border: 1px solid var(--colorFondo);
+  border-radius: 10px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contenedorVideo{
+  width: 100%;
+  text-align: center;
+}
+video{
+  width: 60%;
+}
+
+.galeriaHobbies:hover {
+  border: 2px solid var(--colorPrimario);
+}
+
+.galeriaHobbies img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tituloImagen {
+  padding: 15px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--colorPrimario);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.contenerdorGaleria {
+  /* padding: 0 6px; */
+  float: left;
+  width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+  .contenedorHobbies {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .contenedorHobbies {
+    grid-template-columns: 1fr;
+  }
+}
+
